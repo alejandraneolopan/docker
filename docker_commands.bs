@@ -32,3 +32,45 @@ docker search nginx --filter is-official=true
 docker create nginx
 docker container list -a
 docker run nginx
+# Exercise 3
+sudo systemctl status docker
+sudo systemctl stop docker.socket
+sudo systemctl stop docker
+docker run nginx
+sudo systemctl restart docker
+sudo systemctl status docker
+#Exercise 4
+docker container  run -i ubuntu
+ls
+apt update
+apt install curl
+exit
+#Exercise 5
+docker ps
+docker ps -a
+#Exercise 6
+ docker run -d alpine
+ docker run -d -i alpine /bin/sh
+ docker ps
+ docker pause condescending_buck
+ docker ps -a
+ docker unpause condescending_buck
+ docker stop condescending_buck
+ docker restart condescending_buck
+ docker kill condescending_buck
+ 
+ #Exercise 7
+ docker remove condescending_buck
+ docker pas -a
+ #Exercise 8
+ docker image pull alpine
+ docker image pull ubuntu
+ docker images
+ #Exercise 9
+ docker run -i alpine:latest sh -c "echo hello from alpine"
+ busybox uname -a
+ docker ps -a
+ #Exercise 10
+ docker container prune
+ docker image prune
+ docker system df
