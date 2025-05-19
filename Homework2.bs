@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#Homework 2
+#Exercise 1
+docker network ls
+docker network inspect bridge
+docker container run -d -i alpine /bin/sh
+docker network connect mybridge priceless_almeida
+#Exercise 2
+docker container run -d -i nginx /bin/sh
+docker container run -d -i nginx /bin/sh
+docker ps -a
+docker network connect mybridge admiring_napier
+docker network connect mybridge vibrant_heyrovsky
+docker exec -ti admiring_napier bash
+apt-get update
+apt-get install iputils-ping
+apt-get install net-tools
+ifconfig
+exit
+docker exec -ti vibrant_heyrovsky bash
+apt-get update
+apt-get install iputils-ping
+apt-get install net-tools
+ifconfig
+ping 172.17.04
+#Exercise 3
+docker volume create myvolume
+docker run -it -v myvolume:/data alpine:latest
+touch /data/Newfile.txt
+vi /data/Newfile.txt
+This is a peristent file
+Esc
+:wq
+ls /data
+Ctrl + P 
+Ctrl + Q
+docker stop compassionate_visvesvaraya
+docker container restart compassionate_visvesvaraya
+docker exec compassionate_visvesvaraya ls /data
+#Exercise 4
+#Exercise 5
+#Exercise 6
+#Exercise 7
+#Exercise 8
+#Exercise 9
+#Exercise 10
+
+
